@@ -1,29 +1,43 @@
 {
-  "name": "gai-tech",
-  "version": "0.0.1",
-  "description": "Website for the G.A.I Tech start up",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iraquitan/gai-tech.git"
-  },
-  "keywords": [
-    "webdev"
-  ],
-  "author": "Iraquitan Cordeiro Filho",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/iraquitan/gai-tech/issues"
-  },
-  "homepage": "https://github.com/iraquitan/gai-tech#readme",
-  "dependencies": {
-    "bootstrap": "^4.1.3"
-  },
-  "devDependencies": {
-    "@fortawesome/fontawesome-pro": "^5.5.0",
-    "browser-sync": "^2.26.3"
-  }
+    "name": "gai-tech",
+    "version": "0.0.1",
+    "description": "Website for the G.A.I Tech start up",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iraquitan/gai-tech.git"
+    },
+    "keywords": [
+        "webdev"
+    ],
+    "author": "Iraquitan Cordeiro Filho",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/iraquitan/gai-tech/issues"
+    },
+    "homepage": "https://github.com/iraquitan/gai-tech#readme",
+    "dependencies": {
+        "bootstrap": "^4.1.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.6",
+        "@babel/preset-env": "^7.1.6",
+        "@fortawesome/fontawesome-pro": "^5.5.0",
+        "browser-sync": "^2.26.3",
+        "del": "^3.0.0",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-concat-css": "^3.1.0",
+        "gulp-cssnano": "^2.1.3",
+        "gulp-imagemin": "^5.0.3",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-uglify": "^3.0.1",
+        "requirejs": "^2.3.6"
+    }
 }

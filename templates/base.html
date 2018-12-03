@@ -1,0 +1,70 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% trans "G.A.I Tech" %}{% endblock title %}</title>
+    <meta name="google-site-verification" content="0Fa2AMxuXGNaT6xFBZbRmdA1ZKrI1jba-Pi7zajpLHo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{% trans "We are a start up working with general artificial intelligence." %}">
+    <meta name="author" content="Iraquitan C. Filho">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    {% block css %}
+    <!-- Mailchimp Stylesheet -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <!-- Your stuff: Third-party CSS libraries go here -->
+    <!-- Mailchimp custom Stylesheet -->
+    <style type="text/css">
+      #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
+      #mc_embed_signup .my_mc_button {background-color: #74afad;}
+      #mc_embed_signup .my_mc_button:hover {background-color: #488a87;}
+      #mce-responses {background-color: rgba(255,255,255,0.85)}
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- This file stores project-specific CSS -->
+    <link href="{% static 'css/bundle.min.css' %}" rel="stylesheet">
+    {% endblock css %}
+  </head>
+
+    <body id="page-top">
+
+    {% include "./navbar.html" %}
+
+    {% block content %}
+    <p>{% trans "Use this document as a way to quick start any new project." %}</p>
+    {% endblock content %}
+
+    {% include "./footer.html" %}
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% block javascript %}
+
+      <!-- Required by Bootstrap v4.1.1 -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+      <!-- Your stuff: Third-party javascript libraries go here -->
+      {% if debug %}
+        <script src="{% static 'vendor/fontawesome-pro/all.min.js' %}"></script>
+      {% endif %}
+
+      <!-- place project specific Javascript in this file -->
+      <script src="{% static 'js/index.min.js' %}"></script>
+
+    {% endblock javascript %}
+    {% block additional_js %}
+    {% endblock additional_js %}
+  </body>
+</html>
+
