@@ -3,6 +3,7 @@
 
 {% block content %}
 <header class="masthead text-center text-white d-flex">
+    <div class="gradient-overlay"></div>
     <div class="container my-auto">
     <div class="row">
         <div class="col-lg-10 mx-auto">
@@ -76,7 +77,15 @@
     </div>
 </section>
 
-<section class="p-0" id="portfolio">
+<section id="portfolio">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+        <h2 class="section-heading">{% trans "Portfolio" %}</h2>
+        <hr class="my-4">
+        </div>
+    </div>
+    </div>
     <div class="container-fluid p-0">
     <div class="row no-gutters popup-gallery">
         {% comment %} <div class="col-lg-4 col-sm-6">
@@ -170,7 +179,7 @@
         </a>
         </div> {% endcomment %}
         <div class="col-lg-4 col-sm-6">
-        <a class="portfolio-box" href="img/portfolio/fullsize/paper-1.jpg">
+        <a class="portfolio-box" href="https://www.researchgate.net/publication/275949439_Anticipatory_EEG_Signals_for_Detecting_and_Classifying_Game_Interaction_Onset" target="_blank">
             <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/paper-1.jpg' %}" alt="">
             <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
@@ -185,7 +194,7 @@
         </a>
         </div>
         <div class="col-lg-4 col-sm-6">
-        <a class="portfolio-box" href="img/portfolio/fullsize/paper-2.jpg">
+        <a class="portfolio-box" href="https://www.researchgate.net/publication/319069238_A_Novel_Procedure_for_Classification_of_Early_Human_Actions_from_EEG_Signals" target="_blank">
             <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/paper-2.jpg' %}" alt="">
             <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
@@ -200,7 +209,7 @@
         </a>
         </div>
         <div class="col-lg-4 col-sm-6">
-        <a class="portfolio-box" href="img/portfolio/fullsize/paper-3.png">
+        <a class="portfolio-box" href="https://www.researchgate.net/publication/319205987_A_Deep_Learning_Approach_for_Classification_of_Reaching_Targets_from_EEG_Images" target="_blank">
             <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/paper-3.png' %}" alt="">
             <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
