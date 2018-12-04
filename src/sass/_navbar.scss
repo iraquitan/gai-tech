@@ -12,6 +12,18 @@
     &:focus,
     &:hover {
       color: darken($primary, .1);
+      #logo-main {
+          fill: $black;
+        }
+        #logo-tech {
+            fill: $primary;
+        }
+    }
+    #logo-main {
+        fill: fade-out($black, .3);
+    }
+    #logo-tech {
+        fill: fade-out($primary, .3);
     }
   }
   .navbar-nav {
@@ -76,6 +88,12 @@
         &:focus,
         &:hover {
           color: darken($primary, .1);
+          #logo-main {
+              fill: darken($black, .1);
+            }
+        }
+        #logo-main {
+            fill: fade-out($black, .3);
         }
       }
       .navbar-nav > li.nav-item > a.nav-link,
