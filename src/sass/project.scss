@@ -6,3 +6,28 @@
 @import "services.scss";
 @import "portfolio.scss";
 @import "bootstrap-overrides.scss";
+
+#mc_embed_signup {
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    #mce-EMAIL {
+        border-radius: 300px;
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+    .my_mc_button {
+        background-color: $primary;
+        border-radius: 300px;
+        font-size: .9rem;
+        font-weight: 700;
+        &:focus,
+        &:hover {
+            background-color: fade-out($primary, .3);
+        }
+    }
+    #mce-responses {
+        background-color: rgba(255,255,255,0.85);
+    }
+}
+/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */

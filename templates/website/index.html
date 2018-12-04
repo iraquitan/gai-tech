@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
 <header class="masthead text-center text-white d-flex">
@@ -79,7 +79,7 @@
 <section class="p-0" id="portfolio">
     <div class="container-fluid p-0">
     <div class="row no-gutters popup-gallery">
-        <div class="col-lg-4 col-sm-6">
+        {% comment %} <div class="col-lg-4 col-sm-6">
         <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
             <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/1.jpg' %}" alt="">
             <div class="portfolio-box-caption">
@@ -168,6 +168,51 @@
             </div>
             </div>
         </a>
+        </div> {% endcomment %}
+        <div class="col-lg-4 col-sm-6">
+        <a class="portfolio-box" href="img/portfolio/fullsize/paper-1.jpg">
+            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/paper-1.jpg' %}" alt="">
+            <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                Paper
+                </div>
+                <div class="project-name">
+                Anticipatory EEG Signals for Detecting and Classifying Game Interaction Onset
+                </div>
+            </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+        <a class="portfolio-box" href="img/portfolio/fullsize/paper-2.jpg">
+            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/paper-2.jpg' %}" alt="">
+            <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                Paper
+                </div>
+                <div class="project-name">
+                A Novel Procedure for Classification of Early Human Actions from EEG Signals
+                </div>
+            </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+        <a class="portfolio-box" href="img/portfolio/fullsize/paper-3.png">
+            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/paper-3.png' %}" alt="">
+            <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                Paper
+                </div>
+                <div class="project-name">
+                A Deep Learning Approach for Classification of Reaching Targets from EEG Images
+                </div>
+            </div>
+            </div>
+        </a>
         </div>
     </div>
     </div>
@@ -175,8 +220,25 @@
 
 <section class="bg-dark text-white">
     <div class="container text-center">
-    <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-    <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+    <h2 class="mb-4">{% trans "Subscribe to our mailing list" %}</h2>
+    {% comment %} <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a> {% endcomment %}
+
+    <!-- Begin Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+    <form action="https://gtechai.us19.list-manage.com/subscribe/post?u=2e66b89b184054b1fc6c2cb37&amp;id=0f884b9cab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+        
+        <input type="email" value="" name="EMAIL" class="email my_email" id="mce-EMAIL" placeholder="email address" required>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2e66b89b184054b1fc6c2cb37_0f884b9cab" tabindex="-1" value=""></div>
+        {% comment %} <a class="btn btn-light btn-xl sr-button" >Download Now!</a> {% endcomment %}
+        {% comment %} <button class="btn btn-light btn-xl sr-button" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Subscribe</button> {% endcomment %}
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button my_mc_button"></div>
+        </div>
+    </form>
+    </div>
+
+    <!--End mc_embed_signup-->
     </div>
 </section>
 {% endblock content %}
