@@ -30,7 +30,8 @@ const paths = {
     dest: staticDest + 'js/'
   },
   styles: {
-    src: 'src/sass/project.scss',
+    entry: 'src/sass/project.scss',
+    src: 'src/sass/*.scss',
     dest: staticDest + 'css/'
   },
   images: {
@@ -85,7 +86,7 @@ function vendorBootstrapJs () {
 }
 
 function styles () {
-  return gulp.src(paths.styles.src, { sourcemaps: true })
+  return gulp.src(paths.styles.entry, { sourcemaps: true })
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ browsers: ['last 2 versions'] })) // Adds vendor prefixes
     .pipe(concatCss('bundle.css'))
@@ -119,7 +120,7 @@ function serve (done) {
 function watch () {
   gulp.watch(paths.styles.src, gulp.series(styles, reload))
   gulp.watch(paths.scripts.src, gulp.series(scripts, reload))
-  //   gulp.watch(paths.images + '/*', ['imgCompression'])
+  gulp.watch(paths.images.src, gulp.series(imgCompression, reload))
   gulp.watch(paths.templates, reload)
 }
 
