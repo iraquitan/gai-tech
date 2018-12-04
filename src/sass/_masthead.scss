@@ -1,9 +1,10 @@
 // Styling for the masthead
 header.masthead {
-  padding-top: 10rem;
+  position: relative;
+    padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
 //   background-image: url('../img/header.jpg');
-  background-image: url('../img/shane-rounce-496836-unsplash.jpg');
+  background-image: url('../img/inaki-del-olmo-598169-unsplash.jpg');
   background-position: center center;
   @include background-cover;
   hr {
@@ -15,6 +16,16 @@ header.masthead {
   }
   p {
     font-weight: 300;
+  }
+  .gradient-overlay {
+    position: absolute;
+    // background-image: linear-gradient(to bottom right,#dc4225,#002f4b);
+    background-image: linear-gradient(to bottom right,$primary,#002f4b);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
   }
   @media (min-width: 768px) {
     p {
